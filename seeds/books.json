@@ -1,0 +1,98 @@
+[
+  {
+    "title": "Clean Code",
+    "authors": ["Robert C. Martin"],
+    "numberOfPages": 464,
+    "shortDescription": "Learn how to write code that is readable, maintainable, and elegant.",
+    "taxonomy": ["Programming", "Best Practices"],
+    "externalLink": "https://www.goodreads.com/book/show/3735293-clean-code"
+  },
+  {
+    "title": "The Pragmatic Programmer",
+    "authors": ["David Thomas", "Andrew Hunt"],
+    "numberOfPages": 352,
+    "shortDescription": "Your journey to mastery in software development with practical wisdom.",
+    "taxonomy": ["Programming", "Professional Development"],
+    "externalLink": "https://www.goodreads.com/book/show/4099.The_Pragmatic_Programmer"
+  },
+  {
+    "title": "Design Patterns",
+    "authors": ["Gang of Four"],
+    "numberOfPages": 395,
+    "shortDescription": "Elements of Reusable Object-Oriented Software - the foundational patterns book.",
+    "taxonomy": ["Programming", "Software Architecture"],
+    "externalLink": "https://www.goodreads.com/book/show/85009.Design_Patterns"
+  },
+  {
+    "title": "Refactoring",
+    "authors": ["Martin Fowler"],
+    "numberOfPages": 418,
+    "shortDescription": "Improving the Design of Existing Code with proven techniques.",
+    "taxonomy": ["Programming", "Best Practices"],
+    "externalLink": "https://www.goodreads.com/book/show/44936.Refactoring"
+  },
+  {
+    "title": "Code Complete",
+    "authors": ["Steve McConnell"],
+    "numberOfPages": 960,
+    "shortDescription": "A Practical Handbook of Software Construction techniques.",
+    "taxonomy": ["Programming", "Professional Development"],
+    "externalLink": "https://www.goodreads.com/book/show/4845.Code_Complete"
+  },
+  {
+    "title": "The Mythical Man-Month",
+    "authors": ["Fred Brooks"],
+    "numberOfPages": 322,
+    "shortDescription": "Essays on Software Project Management and team dynamics.",
+    "taxonomy": ["Project Management", "Software Development"],
+    "externalLink": "https://www.goodreads.com/book/show/4566.The_Mythical_Man_Month"
+  },
+  {
+    "title": "Working Effectively with Legacy Code",
+    "authors": ["Michael C. Feathers"],
+    "numberOfPages": 461,
+    "shortDescription": "Strategies for handling complex and untested codebases.",
+    "taxonomy": ["Programming", "Best Practices"],
+    "externalLink": "https://www.goodreads.com/book/show/44919.Working_Effectively_with_Legacy_Code"
+  },
+  {
+    "title": "Introduction to Algorithms",
+    "authors": ["Cormen", "Leiserson", "Rivest", "Stein"],
+    "numberOfPages": 1312,
+    "shortDescription": "Comprehensive guide to algorithms and computational thinking.",
+    "taxonomy": ["Algorithms", "Computer Science"],
+    "externalLink": "https://www.goodreads.com/book/show/108986.Introduction_to_Algorithms"
+  },
+  {
+    "title": "You Don't Know JS",
+    "authors": ["Kyle Simpson"],
+    "numberOfPages": 400,
+    "shortDescription": "Deep dive into JavaScript fundamentals and advanced concepts.",
+    "taxonomy": ["JavaScript", "Programming"],
+    "externalLink": "https://www.goodreads.com/book/show/22542433-you-don-t-know-js"
+  },
+  {
+    "title": "Atomic Habits",
+    "authors": ["James Clear"],
+    "numberOfPages": 320,
+    "shortDescription": "Transform your life with tiny changes and powerful systems.",
+    "taxonomy": ["Self-improvement", "Productivity"],
+    "externalLink": "https://www.goodreads.com/book/show/40121378-atomic-habits"
+  },
+  {
+    "title": "The Art of Computer Programming",
+    "authors": ["Donald E. Knuth"],
+    "numberOfPages": 883,
+    "shortDescription": "Fundamental algorithms and detailed analysis of programming techniques.",
+    "taxonomy": ["Algorithms", "Computer Science"],
+    "externalLink": "https://www.goodreads.com/book/show/112247.The_Art_of_Computer_Programming_Vol_1"
+  },
+  {
+    "title": "Domain-Driven Design",
+    "authors": ["Eric Evans"],
+    "numberOfPages": 560,
+    "shortDescription": "Tackle complexity in the heart of software with domain-driven approaches.",
+    "taxonomy": ["Software Architecture", "Best Practices"],
+    "externalLink": "https://www.goodreads.com/book/show/179133.Domain_Driven_Design"
+  }
+]

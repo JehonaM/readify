@@ -1,0 +1,19 @@
+{
+  "name": "readify",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "contentful": "^11.10.1",
+    "contentful-management": "^11.67.0",
+    "contentful-migration": "^4.31.5",
+    "csv-parser": "^3.2.0",
+    "dotenv": "^17.2.3"
+  }
+}
