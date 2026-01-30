@@ -1,0 +1,12 @@
+{
+  "name": "cms",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "check": "node check-entries.js"
+  },
+  "dependencies": {
+    "contentful-management": "^11.68.0",
+    "dotenv": "^16.6.1"
+  }
+}
