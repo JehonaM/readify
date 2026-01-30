@@ -7,12 +7,6 @@ const nextConfig = {
   },
 
   allowedDevOrigins: ["192.168.0.72"],
-  experimental: {
-    turbopack: {
-
-      root: ".",
-    },
-  },
 };
 
 export default nextConfig;
