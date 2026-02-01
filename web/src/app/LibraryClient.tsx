@@ -1,6 +1,14 @@
 "use client";
 import React, { useState } from "react";
 import Link from "next/link";
+import { algoliasearch } from "algoliasearch";
+import { InstantSearch, SearchBox, Hits } from "react-instantsearch";
+import { BookHit } from "@/components/BookHit";
+
+const searchClient = algoliasearch(
+  process.env.NEXT_PUBLIC_ALGOLIA_APP_ID!,
+  process.env.NEXT_PUBLIC_ALGOLIA_SEARCH_KEY!,
+);
 
 export default function LibraryClient({ initialBooks, categories }: any) {
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
@@ -16,7 +24,6 @@ export default function LibraryClient({ initialBooks, categories }: any) {
 
   return (
     <div className="flex flex-col md:flex-row gap-8 mt-10 px-6">
-      {/* SIDEBAR - FILTRA */}
       <aside className="w-full md:w-64 bg-gray-50 p-6 rounded-lg h-fit">
         <h2 className="text-xl font-bold mb-4 text-gray-800">Filtra</h2>
         <div className="space-y-4">
@@ -25,7 +32,6 @@ export default function LibraryClient({ initialBooks, categories }: any) {
               Kategoritë
             </h3>
             <ul className="space-y-2">
-              {/* Butoni për të hequr filtrat */}
               <li className="flex items-center gap-2">
                 <input
                   type="radio"
@@ -67,46 +73,23 @@ export default function LibraryClient({ initialBooks, categories }: any) {
         </div>
       </aside>
 
-      {/* LISTA E LIBRAVE (GRID) */}
-      <section className="flex-1">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {filteredBooks.map((book: any, index: number) => (
-            <div
-              key={`${book.slug}-${index}`}
-              className="bg-white border border-gray-200 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow flex flex-col"
-            >
-              <div className="aspect-[3/4] bg-gray-100 w-full overflow-hidden">
-                {book.coverImage?.url ? (
-                  <img
-                    src={book.coverImage.url}
-                    alt={book.title}
-                    className="w-full h-full object-cover"
-                  />
-                ) : (
-                  <div className="flex items-center justify-center h-full text-gray-400">
-                    Pa Imazh
-                  </div>
-                )}
-              </div>
-              <div className="p-4 flex flex-col flex-grow">
-                <h3 className="font-bold text-lg leading-tight mb-2 text-gray-900">
-                  {book.title}
-                </h3>
-                <p className="text-gray-600 text-sm mb-4 flex-grow">
-                  {book.authors?.join(", ")}
-                </p>
+      <section className="flex-1 px-8">
+        <InstantSearch searchClient={searchClient} indexName="books_index">
+          <div className="flex justify-center mb-8">
+            <SearchBox
+              placeholder="Kërko libra..."
+              className="w-full max-w-md p-2 border rounded-lg shadow-sm"
+            />
+          </div>
 
-                {/* 3. Linku për PDP */}
-                <Link
-                  href={`/book/${book.slug}`}
-                  className="w-full bg-blue-600 text-white py-2 rounded-lg font-medium hover:bg-blue-700 transition-colors text-center block"
-                >
-                  Shiko Detajet
-                </Link>
-              </div>
-            </div>
-          ))}
-        </div>
+          <Hits
+            hitComponent={BookHit}
+            classNames={{
+              list: "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6",
+              item: "h-full",
+            }}
+          />
+        </InstantSearch>
       </section>
     </div>
   );

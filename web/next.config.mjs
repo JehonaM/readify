@@ -5,6 +5,14 @@ const nextConfig = {
     buildActivity: true,
     buildActivityPosition: "bottom-right",
   },
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "images.ctfassets.net",
+      },
+    ],
+  },
 
   allowedDevOrigins: ["192.168.0.72"],
 };

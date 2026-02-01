@@ -28,7 +28,6 @@ export default async function LibraryPage() {
     return (
       <main className="p-10">
         <h1 className="text-3xl font-bold mb-6">Libraria Readify</h1>
-        {/* Ky komponent do të shfaqë listën dhe filtrat */}
         <LibraryClient
           initialBooks={data?.bookCollection?.items || []}
           categories={data?.taxonomyTermCollection?.items || []}
