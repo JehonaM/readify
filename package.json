@@ -7,5 +7,9 @@
   ],
   "scripts": {
     "cms:check": "npm run check -w cms"
+  },
+  "dependencies": {
+    "@contentful/rich-text-react-renderer": "^16.1.6",
+    "contentful": "^11.10.3"
   }
 }

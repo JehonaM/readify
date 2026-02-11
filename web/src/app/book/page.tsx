@@ -1,6 +1,5 @@
 "use client";
 import React, { useState } from "react";
-import Link from "next/link";
 import { algoliasearch } from "algoliasearch";
 import { InstantSearch, SearchBox, Hits } from "react-instantsearch";
 import { BookHit } from "@/components/BookHit";
@@ -47,7 +46,7 @@ export default function LibraryClient({ initialBooks, categories }: any) {
                   Të gjitha
                 </label>
               </li>
-              {categories.map((cat: any) => (
+              {categories?.map((cat: any) => (
                 <li key={cat.slug} className="flex items-center gap-2">
                   <input
                     type="checkbox"
@@ -77,16 +76,22 @@ export default function LibraryClient({ initialBooks, categories }: any) {
         <InstantSearch searchClient={searchClient} indexName="books_index">
           <div className="flex justify-center mb-8">
             <SearchBox
-              placeholder="Kërko libra..."
-              className="w-full max-w-md p-2 border rounded-lg shadow-sm"
+              placeholder="Search for movies..."
+              className="w-full"
+              classNames={{
+                root: "relative",
+                input:
+                  "w-full p-4 pl-12 border-2 border-gray-100 rounded-xl focus:border-blue-500 outline-none transition-all",
+                submitIcon: "hidden",
+                resetIcon: "hidden",
+              }}
             />
           </div>
 
           <Hits
             hitComponent={BookHit}
             classNames={{
-              list: "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6",
-              item: "h-full",
+              list: "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6",
             }}
           />
         </InstantSearch>

@@ -16,6 +16,7 @@
     "typescript": "^5.9.3"
   },
   "dependencies": {
+    "@contentful/rich-text-react-renderer": "^16.1.6",
     "@tailwindcss/postcss": "^4.1.18",
     "algoliasearch": "^5.47.0",
     "contentful": "^11.10.2",

@@ -17,7 +17,7 @@ export function BookHit({ hit }: any) {
 
   return (
     <div className="bg-white border border-gray-200 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow h-full flex flex-col">
-      <div className="aspect-[3/4] bg-gray-100 w-full relative">
+      <div className="aspect-3/4 bg-gray-100 w-full relative">
         {formattedBook.coverImage.url && (
           <img
             src={formattedBook.coverImage.url}

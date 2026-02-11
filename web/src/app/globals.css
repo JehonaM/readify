@@ -3,3 +3,31 @@
 @tailwind utilities;
 
 @import "tailwindcss";
+
+.ais-SearchBox-form {
+  border: none !important;
+  box-shadow: none !important;
+  background: transparent !important;
+}
+
+.ais-SearchBox-form::before,
+.ais-SearchBox-form::after {
+  display: none !important;
+}
+
+.ais-Hits-list {
+  border: none !important;
+  padding: 0 !important;
+}
+
+.ais-SearchBox-form,
+.ais-SearchBox-input {
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.ais-RefinementList-list {
+  list-style: none !important;
+  padding: 0 !important;
+}
