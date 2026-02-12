@@ -1,7 +1,4 @@
-
-
 export async function getEntries(query: string) {
-
   if (!query) throw new Error("No query provided!");
 
   const response = await fetch(
@@ -13,6 +10,7 @@ export async function getEntries(query: string) {
         Authorization: `Bearer ${process.env.CONTENTFUL_ACCESS_TOKEN}`,
       },
       body: JSON.stringify({ query }),
+      next: { revalidate: 60 },
     },
   );
 

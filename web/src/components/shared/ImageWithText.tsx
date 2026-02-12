@@ -18,9 +18,9 @@ export default function ImageWithText({
 
   return (
     <div
-      className={`flex flex-col md:flex-row gap-10 items-center my-20 ${isLeft ? "" : "md:flex-row-reverse"}`}
+      className={`flex flex-col md:flex-row gap-10 items-start my-20 ${isLeft ? "" : "md:flex-row-reverse"}`}
     >
-      <div className="flex-1 relative h-100 w-full rounded-xl overflow-hidden shadow-lg">
+      <div className="flex-1 relative aspect-video w-full rounded-xl shadow-lg ">
         <Image src={image} alt={title} fill className="object-cover" />
       </div>
       <div className="flex-1 space-y-4">

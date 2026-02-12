@@ -69,7 +69,10 @@ query {
     return (
       <div className="p-20 text-center">
         <h1 className="text-2xl font-bold">Libri nuk u gjet!</h1>
-        <Link href="/" className="text-blue-600 underline mt-4 inline-block">
+        <Link
+          href="/book"
+          className="text-blue-600 underline mt-4 inline-block"
+        >
           Kthehu te Libraria
         </Link>
       </div>
@@ -82,7 +85,7 @@ query {
     <main className="min-h-screen bg-gray-50 py-12 px-6">
       <div className="max-w-5xl mx-auto">
         <Link
-          href="/"
+          href="/book"
           className="group flex items-center text-gray-600 hover:text-blue-600 transition-colors mb-8"
         >
           <span className="mr-2 text-xl">←</span>
@@ -104,7 +107,7 @@ query {
                 {book.title}
               </h1>
               <p className="text-xl text-blue-600 font-semibold italic">
-                nga {book.authors?.join(", ") || "Autor i panjohur"}
+                nga {book.authors?.join(", ") || "Unknown Author"}
               </p>
 
               <div className="flex gap-2 mt-3">
