@@ -17,7 +17,6 @@ export async function getEntries(query: string) {
   const json = await response.json();
   if (json.errors) {
     console.error("GraphQL Errors:", JSON.stringify(json.errors, null, 2));
-    throw new Error("Contentful rejected the query");
   }
   return json.data;
 }

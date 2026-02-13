@@ -76,19 +76,25 @@ To run this project locally, follow these steps:
 
 Bash
 cd web
-npm install 3. Environment Variables
-Create a .env.local file inside the web/ folder and add your credentials:
+npm install
+
+3. Environment Variables
+   Create a .env.local file inside the web/ folder and add your credentials:
 
 Code snippet
 CONTENTFUL_SPACE_ID=your_id
 CONTENTFUL_ACCESS_TOKEN=your_token
 NEXT_PUBLIC_ALGOLIA_APP_ID=your_id
-NEXT_PUBLIC_ALGOLIA_SEARCH_KEY=your_key 4. CMS Setup (Migrations & Seeding)
-Run the automated scripts to build the Contentful structure and populate it with books:
+NEXT_PUBLIC_ALGOLIA_SEARCH_KEY=your_key
+
+4. CMS Setup (Migrations & Seeding)
+   Run the automated scripts to build the Contentful structure and populate it with books:
 
 Bash
 npm run migrate
-npm run seed 5. Run the Development Server
-Bash
-npm run dev
-The app will be available at http://localhost:3000.
+npm run seed
+
+5. Run the Development Server
+   Bash
+   npm run dev
+   The app will be available at http://localhost:3000.
