@@ -32,11 +32,7 @@ export default function MoviesPage() {
                   Filters
                 </h2>
                 <ClearRefinements
-                  translations={{ resetText: "Clear All" }}
-                  classNames={{
-                    button:
-                      "text-xs font-bold text-blue-600 hover:text-blue-700 disabled:opacity-20 transition-all",
-                  }}
+                  translations={{ resetButtonText: "Clear All" }}
                 />
               </div>
 
